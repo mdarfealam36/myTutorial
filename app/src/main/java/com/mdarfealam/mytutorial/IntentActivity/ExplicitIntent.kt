@@ -1,25 +1,24 @@
-package com.mdarfealam.mytutorial
+package com.mdarfealam.mytutorial.IntentActivity
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.mdarfealam.mytutorial.databinding.ActivityIntentBinding
-import com.mdarfealam.mytutorial.databinding.ActivityMainBinding
+import com.mdarfealam.mytutorial.databinding.ActivityExplicitIntentBinding
 
-class IntentActivity : AppCompatActivity() {
 
-    lateinit var binding : ActivityIntentBinding
+class ExplicitIntent : AppCompatActivity() {
+
+    lateinit var binding : ActivityExplicitIntentBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityIntentBinding.inflate(layoutInflater)
+        binding = ActivityExplicitIntentBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 //        // Intent
 //        binding.intentButton.setOnClickListener {
 //
 //            // 1st Method
-//            val intent = Intent(this@MainActivity,IntentActivity::class.java)
+//            val intent = Intent(this@ExplicitIntent,IntentActivity::class.java)
 //            startActivity(intent)
 //
 //            // 2nd Method

@@ -3,6 +3,7 @@ package com.mdarfealam.mytutorial
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.mdarfealam.mytutorial.IntentActivity.ExplicitIntent
 import com.mdarfealam.mytutorial.SplashActivity.SplashActivity
 import com.mdarfealam.mytutorial.ToastActivity.ToastActivity
 import com.mdarfealam.mytutorial.databinding.ActivityMainBinding
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
 // Intent
         binding.button2.setOnClickListener {
-            startActivity(Intent(this, IntentActivity::class.java))
+            startActivity(Intent(this, ExplicitIntent::class.java))
         }
 
 // Toast

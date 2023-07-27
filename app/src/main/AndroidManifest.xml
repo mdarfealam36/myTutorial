@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MyTutorial"
         tools:targetApi="31">
         <activity
+            android:name=".IntentActivity.ImplicitIntent"
+            android:exported="false" />
+        <activity
             android:name=".ToastActivity.FancyToastActivity"
             android:exported="false" />
         <activity
@@ -22,7 +25,7 @@
             android:name=".ToastActivity.CustomToastActivity"
             android:exported="false" />
         <activity
-            android:name=".IntentActivity"
+            android:name=".IntentActivity.ExplicitIntent"
             android:exported="false"
             android:label="@string/title_activity_intent"
             android:theme="@style/Theme.MyTutorial" />
