@@ -6,4 +6,58 @@
     android:layout_height="match_parent"
     tools:context=".IntentActivity.ImplicitIntent">
 
+    <TextView
+        android:id="@+id/txtContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:padding="10dp"
+        android:hint="TextView"
+        android:text="@string/lorem_ipsum2"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Share"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/txtContent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="@+id/txtContent"
+        app:layout_constraintTop_toBottomOf="@+id/txtContent" />
+
+
+    <TextView
+        android:id="@+id/txtContent2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:padding="10dp"
+        android:hint="TextView"
+        android:text="@string/lorem_ipsum3"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnShare"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/btnShare"
+        app:layout_constraintTop_toTopOf="@+id/btnShare" />
+
+    <Button
+        android:id="@+id/btnShare2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Share"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/txtContent2"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="@+id/txtContent2"
+        app:layout_constraintTop_toBottomOf="@+id/txtContent2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

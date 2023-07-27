@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.mdarfealam.mytutorial.IntentActivity.ExplicitIntent
+import com.mdarfealam.mytutorial.IntentActivity.IntentActivity
+import com.mdarfealam.mytutorial.ShareBundle.ShareBundleSendData
 import com.mdarfealam.mytutorial.SplashActivity.SplashActivity
 import com.mdarfealam.mytutorial.ToastActivity.ToastActivity
 import com.mdarfealam.mytutorial.databinding.ActivityMainBinding
@@ -28,13 +30,18 @@ class MainActivity : AppCompatActivity() {
 
 // Intent
         binding.button2.setOnClickListener {
-            startActivity(Intent(this, ExplicitIntent::class.java))
+            startActivity(Intent(this, IntentActivity::class.java))
         }
 
 // Toast
         binding.button3.setOnClickListener {
             startActivity(Intent(this, ToastActivity::class.java))
         }
+// Share Bundle
+        binding.button4.setOnClickListener {
+            startActivity(Intent(this, ShareBundleSendData::class.java))
+        }
+
 
     }
 }

@@ -2,10 +2,20 @@
     <string name="app_name">myTutorial</string>
     <string name="title_activity_intent">IntentActivity</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
+
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+
+    <string name="lorem_ipsum2">
+        Hacking is like sex. You get in, you get out, and hope that you didn\'t leave something that can be traced back to you.
+    </string>
+
+    <string name="lorem_ipsum3">
+        Programmers are like Women,
+        No matter how much you get mad
+        because of Errors,
+        You are always the one who is Wrong.
+    </string>
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
@@ -43,4 +53,5 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="text">ds</string>
 </resources>

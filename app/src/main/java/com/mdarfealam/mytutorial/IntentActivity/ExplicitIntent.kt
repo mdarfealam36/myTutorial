@@ -1,5 +1,6 @@
 package com.mdarfealam.mytutorial.IntentActivity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.mdarfealam.mytutorial.databinding.ActivityExplicitIntentBinding
@@ -14,16 +15,18 @@ class ExplicitIntent : AppCompatActivity() {
         binding = ActivityExplicitIntentBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        // Intent
-//        binding.intentButton.setOnClickListener {
-//
-//            // 1st Method
-//            val intent = Intent(this@ExplicitIntent,IntentActivity::class.java)
-//            startActivity(intent)
-//
-//            // 2nd Method
-////            startActivity(Intent(this,IntentActivity::class.java))
-//        }
+        val btnName = intent.getStringExtra("Value0")
+        val id = intent.getIntExtra("Value1",0)
+        val language = intent.getStringExtra("Value2")
+
+        binding.tvText.text= btnName
+        binding.tvId.text= id.toString()
+        binding.tvLanguage.text=language
+
+
+
+
+
 
     }
 }
