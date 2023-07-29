@@ -3,6 +3,15 @@
     <string name="title_activity_intent">IntentActivity</string>
     <!-- Strings used for fragments for navigation -->
 
+    <string-array name="choice_item">
+        <item>One</item>
+        <item>Two</item>
+        <item>Three</item>
+        <item>Four</item>
+        <item>Five</item>
+    </string-array>
+
+
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 

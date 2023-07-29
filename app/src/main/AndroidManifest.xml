@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +16,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyTutorial"
         tools:targetApi="31">
+        <activity
+            android:name=".Toolbar.ToolbarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CheckInternetConnection.CheckInternetConnection"
+            android:exported="false" />
+        <activity
+            android:name=".BottomSheet.BottomSheetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AlertDialogActivity.AlertDialogActivity"
+            android:exported="false" />
         <activity
             android:name=".ShareBundle.ShareBundleReceiveData"
             android:exported="false" />
@@ -29,9 +45,6 @@
             android:exported="false" />
         <activity
             android:name=".ToastActivity.ToastActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ToastActivity.CustomToastActivity"
             android:exported="false" />
         <activity
             android:name=".IntentActivity.ExplicitIntent"
