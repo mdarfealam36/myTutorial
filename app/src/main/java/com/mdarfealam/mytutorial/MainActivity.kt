@@ -6,10 +6,10 @@ import android.os.Bundle
 import com.mdarfealam.mytutorial.AlertDialogActivity.AlertDialogActivity
 import com.mdarfealam.mytutorial.BottomSheet.BottomSheetActivity
 import com.mdarfealam.mytutorial.CheckInternetConnection.CheckInternetConnection
-import com.mdarfealam.mytutorial.IntentActivity.ExplicitIntent
 import com.mdarfealam.mytutorial.IntentActivity.IntentActivity
 import com.mdarfealam.mytutorial.ShareBundle.ShareBundleSendData
 import com.mdarfealam.mytutorial.SplashActivity.SplashActivity
+import com.mdarfealam.mytutorial.TabLayout.TabLayoutActivity
 import com.mdarfealam.mytutorial.ToastActivity.ToastActivity
 import com.mdarfealam.mytutorial.Toolbar.ToolbarActivity
 import com.mdarfealam.mytutorial.databinding.ActivityMainBinding
@@ -65,6 +65,11 @@ class MainActivity : AppCompatActivity() {
 // Toolbar
         binding.button8.setOnClickListener {
             startActivity(Intent(this, ToolbarActivity::class.java))
+        }
+
+// Tab Layout
+        binding.button9.setOnClickListener {
+            startActivity(Intent(this, TabLayoutActivity::class.java))
         }
 
 

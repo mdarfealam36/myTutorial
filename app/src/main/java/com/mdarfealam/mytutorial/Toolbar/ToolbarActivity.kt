@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.mdarfealam.mytutorial.R
-import com.mdarfealam.mytutorial.databinding.ActivityCheckInternetConnectionBinding
 import com.mdarfealam.mytutorial.databinding.ActivityToolbarBinding
 
 class ToolbarActivity : AppCompatActivity() {
