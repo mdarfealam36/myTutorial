@@ -2,38 +2,32 @@ package com.mdarfealam.mytutorial.Adapters
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.mdarfealam.mytutorial.Fragments.CallsFragment
 import com.mdarfealam.mytutorial.Fragments.ChatsFragment
 import com.mdarfealam.mytutorial.Fragments.StatusFragment
+import com.mdarfealam.mytutorial.R
 
 
 class MyViewPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle):FragmentStateAdapter(fragmentManager, lifecycle){
-    override fun getItemCount(): Int {
 
+    override fun getItemCount(): Int {
         return 3
     }
-
     override fun createFragment(position: Int): Fragment {
 
       return  when(position){
-
-            0 ->{
-                ChatsFragment()
-            }
-            1 ->{
-                StatusFragment()
-            }
-            2 ->{
-                CallsFragment()
-            }
-            else ->{
-                Fragment()
-            }
+            0 -> ChatsFragment()
+            1 -> StatusFragment()
+            2 -> CallsFragment()
+            else -> ChatsFragment()
         }
 
     }
+
+
 
 
 }

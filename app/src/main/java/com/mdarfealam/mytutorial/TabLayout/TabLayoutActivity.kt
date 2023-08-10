@@ -3,54 +3,58 @@ package com.mdarfealam.mytutorial.TabLayout
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.mdarfealam.mytutorial.Adapters.MyViewPagerAdapter
+import com.mdarfealam.mytutorial.Fragments.CallsFragment
 import com.mdarfealam.mytutorial.R
+import com.mdarfealam.mytutorial.databinding.ActivityTabLayoutBinding
 
 class TabLayoutActivity : AppCompatActivity() {
 
+    lateinit var binding: ActivityTabLayoutBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tab_layout)
+        binding = ActivityTabLayoutBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val Pager = findViewById<ViewPager2>(R.id.view_pager2)
-        val tabs = findViewById<TabLayout>(R.id.tab_layout)
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-
+        val toolbar = binding.toolBar
         toolbar.setTitle("TabLayout")
 
+        setupViewPagerAdapter()
+        setUpTabLayout()
+    }
+
+    fun setupViewPagerAdapter(){
         val adapter = MyViewPagerAdapter(supportFragmentManager, lifecycle)
+        binding.viewPager2.adapter = adapter
+    }
+    fun setUpTabLayout(){
 
-        Pager.adapter = adapter
-
-        TabLayoutMediator(tabs, Pager) { tab, position ->
-
+        val tabs = binding.tabLayout
+        TabLayoutMediator(tabs, binding.viewPager2) { tab, position ->
             when(position){
-                0 ->{
-                    tab.text="Chats"
-                }
-                1 ->{
-                    tab.text="Status"
-                }
-                2 ->{
-                    tab.text="Calls"
-                }
+                0 -> tab.text="Chats"
+                1 -> tab.text="Status"
+                2 -> tab.text="Calls"
             }
         }.attach()
+    }
 
+    override fun onBackPressed() {
+
+        val pager = binding.viewPager2
+        if(pager.currentItem > 0){
+            pager.currentItem = 0
+        }else {
+            super.getOnBackPressedDispatcher().onBackPressed()
         }
     }
 
+}
 
-//private var tabTitle = arrayOf("Chats","Status","Calls")
-//val Pager = findViewById<ViewPager2>(R.id.viewPager)
-//val tabs = findViewById<TabLayout>(R.id.tabs)
-//
-//Pager.adapter = MyViewPagerAdapter(supportFragmentManager, lifecycle)
-//
-//TabLayoutMediator(tabs,Pager){tab,position ->
-//    tab.text = tabTitle[position]
-//}
